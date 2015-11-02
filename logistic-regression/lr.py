@@ -32,3 +32,25 @@ class Logistic:
     def __str__(self, *args, **kwargs):
         return super().__str__(*args, **kwargs)
 
+
+def load_train_data():
+    data = {}
+    return data
+
+def load_test_data():
+    """
+
+    :rtype : object
+    """
+    test = {}
+    return test
+
+if __name__ == '__main__':
+    data = load_train_data()
+    print("load trainning data: %d" %(len(data)))
+    maxIterate = 1000;
+    lr = Logistic()
+    lr.train(data, maxIterate)
+    x = load_test_data()
+    print("load testing data: %d" %(len(x)))
+    lr.pred(x)
